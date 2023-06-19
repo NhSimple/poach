@@ -3,34 +3,35 @@ from parser.vidparser import parsemethods
 import os
 
 home_dir = os.path.expanduser("~/")
+current_dir = os.getcwd()
 
 
-def brightest(file, write_path=home_dir):
+def brightest(file, write_path=current_dir):
     parser = parsemethods(file, write_path)
     parser.brightest_frame()
 
 
-def loudest(file, write_path=home_dir):
+def loudest(file, write_path=current_dir):
     parser = parsemethods(file, write_path)
     parser.loudest_frame()
 
 
-def ten_seconds(file, write_path=home_dir):
+def ten_seconds(file, write_path=current_dir):
     parser = parsemethods(file, write_path)
     parser.first_ten_seconds()
 
 
-def before_half(file, write_path=home_dir):
+def before_half(file, write_path=current_dir):
     parser = parsemethods(file, write_path)
     parser.before_half()
 
 
-def after_half(file, write_path=home_dir):
+def after_half(file, write_path=current_dir):
     parser = parsemethods(file, write_path)
     parser.after_half()
 
 
-def order(list, file, write_path=home_dir):
+def order(list, file, write_path=current_dir):
     """
     Order function
 
